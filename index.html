@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Profile of Lijo Joseph</title>
+    <meta name="description" content="Lijo Joseph, Profile of Lijo Joseph">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="Static/css/normalize.css">
+    <link rel="stylesheet" href="Static/css/main.css">
+</head>
+
+<body>
+
+    <!-- Profile navigation links -->
+    <div id="navSection"></div>
+
+    <!-- Header -->
+    <div id="headerSection"></div>
+
+    <!-- Profile Introduction -->
+    <div id="profileIntroSection"></div>
+
+    <div id="profileSection"></div>
+
+    <!-- Footer -->
+    <div id="footerSection"></div>
+
+    <!-- React.js includes -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- Script Includes -->
+    <script src="Static/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="Static/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="Static/js/plugins.js"></script>
+    <script src="Static/js/main.js"></script>
+    <script type="text/babel">
+
+        class NavigationComponent extends React.Component {
+            render() {
+                return (<nav className="profile-nav-section">
+                            <ul>
+                                <li>
+                                    <a href="#profileAbout">About</a>
+                                </li>
+                                <li>
+                                    <a href="#profileExperience">Experience</a>
+                                </li>
+                                <li>
+                                    <a href="#profileSkills">Skills</a>
+                                </li>
+                            </ul>
+                        </nav>);
+            }
+        };
+
+        class HeaderComponent extends React.Component {
+            render() {
+                return (<header className="profile-header"></header>);
+            }
+        };
+
+        class ProfileIntroductionComponent extends React.Component {
+            render() {
+                return (<section className="profile-intro">
+                            <div className="profile-intro-body">
+                                <div className="profile-intro-body-left"></div>
+                                <div className="profile-intro-body-center">
+                                    <div className="profile-intro-body-content">
+                                        <a href="https://www.linkedin.com/in/joseph-lijo/">
+                                            <img src="https://avatars0.githubusercontent.com/u/37959315?s=460&v=4" />
+                                        </a>
+                                        <h1>Lijo Joseph</h1>
+                                        <h2>Software Engineer, Developer</h2>
+                                    </div>
+                                </div>
+                                <div className="profile-intro-body-right"></div>
+                            </div>
+                        </section>);
+            }
+        };
+
+        class ProfileComponent extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {};
+            }
+
+            render() {
+                return (
+                    <section className="profile-content-section" id={this.props.id}>
+                        <h3>{this.props.title}</h3>
+                        <hr/>
+                        <div className="profile-content-skills">
+                            <ul>
+                                <li>{this.props.item1}</li>
+                                <li>{this.props.item2}</li>
+                                <li>{this.props.item3}</li>
+                            </ul>
+                        </div>
+                    </section>
+                );
+            }
+        };
+
+        class FooterComponent extends React.Component {
+            render() {
+                return (<footer>
+                            <div>&copy; 2018 ljoseph.co.uk</div>
+                        </footer>);
+            }
+        };
+
+        // Render Navigation section
+        ReactDOM.render(<NavigationComponent />, document.getElementById("navSection"));
+
+        // Render Header
+        ReactDOM.render(<HeaderComponent />, document.getElementById("headerSection"));
+
+        // Render Profile Introduction section
+        ReactDOM.render(<ProfileIntroductionComponent />, document.getElementById("profileIntroSection"));
+
+        // Render Profile
+        ReactDOM.render(<div>
+                <ProfileComponent title="About" 
+                                  id="profileAbout" 
+                                  item1="Aspiring Software Architect who has around 10 years of experience in web and platform based application development."
+                                  item2="Domain experience includes - data visualization, document and workflow management, gaming, health care systems, investment banking and financial services."
+                                  item3="Quick learner who follows industry trends and standards, passionate in learning new technology with interests in Research and Development work, and full-stack development." />
+                <ProfileComponent title="Experience" 
+                                  id="profileExperience" 
+                                  item1="Document management and versioning experience."
+                                  item2="Investment platform and financial domain experience based on the work with various major investment service providers, asset mangement firms, and financial advisory system providers."
+                                  item3="Other experience and interests include data visualization, marketing and forecasting, and health care." />
+                <ProfileComponent title="Skills" 
+                                  id="profileSkills" 
+                                  item1="Front-end development using HTML5, CSS3, JavaScript, Angular, React, d3.js"
+                                  item2="Back-end development using .NET Framework, Java Spring Framework, MS SQL Server, Google Cloud SQL, and various NoSQL database(s)"
+                                  item3="Cloud development using GCP, and Microsoft Azure" />
+            </div>, document.getElementById("profileSection"));
+
+            // Render Footer
+            ReactDOM.render(<FooterComponent />, document.getElementById("footerSection"));
+    </script>
+</body>
+
+</html>
