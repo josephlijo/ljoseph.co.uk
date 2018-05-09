@@ -6,148 +6,97 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Profile of Lijo Joseph</title>
     <meta name="description" content="Lijo Joseph, Profile of Lijo Joseph">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <link rel="stylesheet" href="Static/css/normalize.css">
-    <link rel="stylesheet" href="Static/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
 </head>
 
 <body>
-
-    <!-- Profile navigation links -->
-    <div id="navSection"></div>
-
-    <!-- Header -->
-    <div id="headerSection"></div>
-
-    <!-- Profile Introduction -->
-    <div id="profileIntroSection"></div>
-
-    <div id="profileSection"></div>
-
-    <!-- Footer -->
-    <div id="footerSection"></div>
-
-    <!-- React.js includes -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-
-    <!-- Script Includes -->
-    <script src="Static/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="Static/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-    <script src="Static/js/plugins.js"></script>
-    <script src="Static/js/main.js"></script>
-    <script type="text/babel">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
-        class NavigationComponent extends React.Component {
-            render() {
-                return (<nav className="profile-nav-section">
-                            <ul>
-                                <li>
-                                    <a href="#profileAbout">About</a>
-                                </li>
-                                <li>
-                                    <a href="#profileExperience">Experience</a>
-                                </li>
-                                <li>
-                                    <a href="#profileSkills">Skills</a>
-                                </li>
-                            </ul>
-                        </nav>);
-            }
-        };
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Lijo Joseph</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        class HeaderComponent extends React.Component {
-            render() {
-                return (<header className="profile-header"></header>);
-            }
-        };
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#profileAbout">About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profileExp">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profileSkills">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-        class ProfileIntroductionComponent extends React.Component {
-            render() {
-                return (<section className="profile-intro">
-                            <div className="profile-intro-body">
-                                <div className="profile-intro-body-left"></div>
-                                <div className="profile-intro-body-center">
-                                    <div className="profile-intro-body-content">
-                                        <a href="https://www.linkedin.com/in/joseph-lijo/">
-                                            <img src="https://avatars0.githubusercontent.com/u/37959315?s=460&v=4" />
-                                        </a>
-                                        <h1>Lijo Joseph</h1>
-                                        <h2>Software Engineer, Developer</h2>
-                                    </div>
-                                </div>
-                                <div className="profile-intro-body-right"></div>
-                            </div>
-                        </section>);
-            }
-        };
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Lijo Joseph</h1>
+                <p class="lead">Software Engineer, R&amp;D Developer, tech enthusiast</p>
+            </div>
+        </div>
+    </div>
 
-        class ProfileComponent extends React.Component {
-            constructor(props) {
-                super(props);
-                this.state = {};
-            }
+    <!-- About -->
+    <div class="container" id="profileAbout">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item disabled active">About</li>
+            <li class="list-group-item">Aspiring Software Architect who has around 10 years of experience in web and platform based application development.</li>
+            <li class="list-group-item">Domain experience includes - data visualization, document and workflow management, gaming, health care systems,
+                investment banking and financial services.</li>
+            <li class="list-group-item">Quick learner who follows industry trends and standards, passionate in learning new technology with interests
+                in Research and Development work, and full-stack development.</li>
+        </ul>
+    </div>
 
-            render() {
-                return (
-                    <section className="profile-content-section" id={this.props.id}>
-                        <h3>{this.props.title}</h3>
-                        <hr/>
-                        <div className="profile-content-skills">
-                            <ul>
-                                <li>{this.props.item1}</li>
-                                <li>{this.props.item2}</li>
-                                <li>{this.props.item3}</li>
-                            </ul>
-                        </div>
-                    </section>
-                );
-            }
-        };
+    <br />
 
-        class FooterComponent extends React.Component {
-            render() {
-                return (<footer>
-                            <div>&copy; 2018 ljoseph.co.uk</div>
-                        </footer>);
-            }
-        };
+    <!-- Experience  -->
+    <div class="container" id="profileExp">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item disabled active">Experience</li>
+            <li class="list-group-item">Document management and versioning experience.</li>
+            <li class="list-group-item">Investment platform and financial domain experience based on the work with various major investment service providers,
+                asset mangement firms, and financial advisory system providers.</li>
+            <li class="list-group-item">Other experience and interests include data visualization, marketing and forecasting, and health care.</li>
+        </ul>
+    </div>
 
-        // Render Navigation section
-        ReactDOM.render(<NavigationComponent />, document.getElementById("navSection"));
+    <br />
 
-        // Render Header
-        ReactDOM.render(<HeaderComponent />, document.getElementById("headerSection"));
+    <!-- Skills -->
+    <div class="container" id="profileSkills">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item disabled active">Skills</li>
+            <li class="list-group-item">Front-end development using HTML5, CSS3, JavaScript, Angular, React, d3.js</li>
+            <li class="list-group-item">Back-end development using .NET Framework, Java Spring Framework, MS SQL Server, Google Cloud SQL, and various
+                NoSQL database(s)</li>
+            <li class="list-group-item">Cloud development using GCP, and Microsoft Azure</li>
+        </ul>
+    </div>
 
-        // Render Profile Introduction section
-        ReactDOM.render(<ProfileIntroductionComponent />, document.getElementById("profileIntroSection"));
-
-        // Render Profile
-        ReactDOM.render(<div>
-                <ProfileComponent title="About" 
-                                  id="profileAbout" 
-                                  item1="Aspiring Software Architect who has around 10 years of experience in web and platform based application development."
-                                  item2="Domain experience includes - data visualization, document and workflow management, gaming, health care systems, investment banking and financial services."
-                                  item3="Quick learner who follows industry trends and standards, passionate in learning new technology with interests in Research and Development work, and full-stack development." />
-                <ProfileComponent title="Experience" 
-                                  id="profileExperience" 
-                                  item1="Document management and versioning experience."
-                                  item2="Investment platform and financial domain experience based on the work with various major investment service providers, asset mangement firms, and financial advisory system providers."
-                                  item3="Other experience and interests include data visualization, marketing and forecasting, and health care." />
-                <ProfileComponent title="Skills" 
-                                  id="profileSkills" 
-                                  item1="Front-end development using HTML5, CSS3, JavaScript, Angular, React, d3.js"
-                                  item2="Back-end development using .NET Framework, Java Spring Framework, MS SQL Server, Google Cloud SQL, and various NoSQL database(s)"
-                                  item3="Cloud development using GCP, and Microsoft Azure" />
-            </div>, document.getElementById("profileSection"));
-
-            // Render Footer
-            ReactDOM.render(<FooterComponent />, document.getElementById("footerSection"));
-    </script>
+    <br />
+    <br />
 </body>
 
 </html>
